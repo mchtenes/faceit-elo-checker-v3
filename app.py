@@ -47,8 +47,14 @@ if st.button("ELO'ları Getir"):
     st.subheader("ELO Sıralaması")
     st.table(elo_list)
 
-# --- Görselleştirme Butonu ---
+# --- Görselleştirme Butonu (Kalıcı Durumlu) ---
+if "viz_acik" not in st.session_state:
+    st.session_state.viz_acik = False
+
 if st.button("Veri Görselleştirici"):
+    st.session_state.viz_acik = True
+
+if st.session_state.viz_acik:
     json_path = "faceit_all_players_last30.json"
     if not os.path.exists(json_path):
         st.error(f"{json_path} dosyası bulunamadı. Lütfen proje klasörüne ekleyin.")

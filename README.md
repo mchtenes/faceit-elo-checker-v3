@@ -1,3 +1,6 @@
 # Faceit Elo + Görselleştirme Arayüzü
 
-Bu uygulama ile iki farklı işlevi tek sayfada çalıştırabilirsiniz.
+Bu uygulama Streamlit ile iki işlevi tek sayfada sunar.
+
+- ELO hesaplama
+- JSON tabanlı veri görselleştirme
